@@ -1,0 +1,18 @@
+package github;
+import java.util.Scanner;
+public class reverse {
+	public static void main(String[] args) {
+		System.out.println("enter the name:");
+		Scanner s=new Scanner(System.in);
+		String g=s.nextLine();
+		s.close();
+		String revers=" ";
+		System.out.println("before "+g);
+		for(int i=g.length();i>0;i--) {
+			revers=revers+g.charAt(i-1);
+			
+		}
+		System.out.println("after "+revers);
+	}
+
+}
