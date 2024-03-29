@@ -1,0 +1,23 @@
+abstract class Scan{
+	abstract int amount(); // abstract methods can't have definition(body).
+}
+class Apollo extends Scan{
+	int amount() {
+		return 3000;
+	}
+}
+class Sims extends Scan{
+	int amount() {
+		return 5000;
+	}
+}
+public class AbstractClassDemo {
+	public static void main(String[] args) {
+		Scan s = new Apollo(); 
+		System.out.println("Scan amt in apollo is "+s.amount());	
+		Scan s1 = new Sims();
+		System.out.println("Scan amt in sims is "+s1.amount());
+
+	}
+
+}
