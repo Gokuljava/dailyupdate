@@ -1,0 +1,49 @@
+// Example of encapsulation in Java
+
+// Create a class representing a student
+class Student {
+    // Private data members (attributes)
+    private String name;
+    private int age;
+
+    // Public getter and setter methods to access and modify the private attributes
+    // Getter method for 'name'
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for 'name'
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter method for 'age'
+    public int getAge() {
+        return age;
+    }
+
+    // Setter method for 'age'
+    public void setAge(int age) {
+        // Validate age (for demonstration purposes)
+        if (age > 0 && age < 120) {
+            this.age = age;
+        } else {
+            System.out.println("Invalid age!");
+        }
+    }
+}
+
+public class EncapsulationExample {
+    public static void main(String[] args) {
+        // Create an object of the Student class
+        Student student1 = new Student();
+
+        // Set student details using setter methods
+        student1.setName("John");
+        student1.setAge(20);
+
+        // Display student details using getter methods
+        System.out.println("Student Name: " + student1.getName());
+        System.out.println("Student Age: " + student1.getAge());
+    }
+}
